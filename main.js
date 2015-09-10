@@ -48,6 +48,8 @@ function create()
         e.preventDefault();
     }
 
+    pathfinder = game.plugins.add(Phaser.Plugin.PathFinderPlugin);
+
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     map = DungeonBuilder.CreateNewDungeon();
@@ -138,8 +140,8 @@ function updateShadowTexture() {
         shadowTexture.context.createRadialGradient(
             heroX, heroY, 100 * 0.75,
             heroX, heroY, radius);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
-    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.4)');
+    gradient.addColorStop(0, 'rgba(255, 210, 117, 1.0)');
+    gradient.addColorStop(1, 'rgba(255, 210, 117, 0.4)');
 
     shadowTexture.context.beginPath();
     shadowTexture.context.fillStyle = gradient;
